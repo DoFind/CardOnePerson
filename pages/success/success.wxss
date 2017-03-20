@@ -1,0 +1,59 @@
+.page {
+    position: relative;
+}
+
+.succeed, .share, .title {
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+}
+
+.succeed {
+    padding-top: 200rpx;
+    /*background: rebeccapurple;*/
+    /*border: 1px solid red;*/
+}
+
+.share {
+    color: limegreen;
+    font-size: 12px;
+    margin-bottom: 20rpx;
+    /*background: red;*/
+}
+
+.card {
+    width: 90%;
+    margin: 0 auto;
+    background: #eee;
+    border-radius: 20rpx;
+    text-align: center;
+    margin-bottom: 60rpx;
+    /*background: springgreen;*/
+}
+
+image {
+    width: 98px;
+    height: 127px;
+}
+.begin {
+    display: block;
+    width: 100%;
+    padding: 20rpx 0;
+    border-top: 1px solid #ccc;
+}
+
+.close {
+
+    width: 100rpx;
+    height: 100rpx;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+
+    text-align: center;
+}
+
+.createM button {
+    color: #888;
+}

@@ -1,0 +1,73 @@
+
+.page {
+    position: relative;
+    background: #eee;
+}
+
+.name, .content, .timeInfo, .address {
+    width: 100%;
+    margin-bottom: 10px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background: #fff;
+}
+.jy {
+    height: 30px;
+    line-height: 30px;
+    padding: 10px; 
+}
+
+/*  这里是父级容器，设置line-height不起作用。
+    文字默认是居中显示，如果设置了直接容器的height */
+
+/*  哦呦，上面说法不对
+    上下设置都可以 */
+    
+.name, .address, .time-list {
+    
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;    
+}
+
+/* 活动名称，地址栏 的文字上下居中显示*/
+.name input, .address input {
+    height: 30px;
+}
+
+.content {
+    
+    height: 90px;
+    padding: 10px;
+    line-height: 30px;
+}
+
+.time-list {
+    width: 100%;
+    position: relative;
+}
+
+.first {
+    border-bottom: 1px solid #ccc;
+}
+
+/*text, picker {
+    display: inline-block;
+    height: 30px;
+}*/
+
+.time-list .title, .time-list .date, .time-list .time {
+    position: absolute;
+}
+.time-list .title {
+    width: 30%;
+    margin-right: 2px;
+}
+.time-list .date {
+    width: 40%px;
+    right: 30%;
+}
+.time-list .time {
+    right: 0;
+    width: 25%;
+}

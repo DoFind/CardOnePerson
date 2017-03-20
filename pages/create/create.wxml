@@ -1,0 +1,37 @@
+<view class="page">
+  <view class="jy">创建打卡任务</view>
+  <view class="name">
+    <input type="text" placeholder="为活动起个名字吧" bindinput="titleChange"/>
+  </view>
+  <view class="content">
+    <!--placeholder="活动简介" -->
+    <textarea placeholder="活动简介" bindinput="contentChange"/>
+  </view>
+
+  <!--picker 选择器-->
+  <!--前两个picker不起做用
+        在这里单独写两个也不行，需要相同格式放进去-->
+  <view class="timeInfo">
+    <view class="time-list first">
+      <text class="title">活动时间</text>
+      <picker></picker>
+      <picker></picker>
+    </view>
+    <view class="time-list first">
+      <text class="title">开始时间</text>
+      <picker class="date" mode="date" value="{{beginDate}}" bindchange="bindDateChange">{{beginDate}}</picker>
+      <picker class="time" mode="time" value="{beginTime}}" bindchange="bindTimeChange">{{beginTime}}</picker>
+    </view>
+    <view class="time-list">
+      <text class="title">结束时间</text>
+      <picker class="date" mode="date" value="{{endDate}}" bindchange="bindDateChange2">{{endDate}}</picker>
+      <picker class="time" mode="time" value="{endTime}}" bindchange="bindTimeChange2">{{endTime}}</picker>
+    </view>
+  </view>
+  <view class="address">
+    <input type="text" placeholder="活动地址 (例：市/区/街道)" bindinput="addressChange" />
+  </view>
+  <view class="createM">
+    <button type="primary" size="default" bindtap="createActivity">确认创建</button>
+  </view>
+</view>

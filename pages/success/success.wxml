@@ -1,0 +1,18 @@
+<view class="page">
+
+    <text class="succeed">创建成功</text>
+    <text class="share">邀请好友一个来打卡吧~</text>
+    
+    <view class="card" bindtap="toDetail">
+        <text class="title">{{title}}</text>
+        <image src="../../img/giraffe.png"></image>
+        <text class="begin">{{beginTime}} 开始</text>
+    </view>
+    
+    
+    <!--<button class="close" bindtap="toMain">X</button>-->
+    
+    <!--<view class="createM">
+        <button type="default" size="default" bindtap="toDetail">已经报名</button>
+    </view>-->
+</view>

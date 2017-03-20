@@ -1,0 +1,57 @@
+.page {
+  position: relative;
+  background: #eee;
+}
+
+.msg {
+  width: 100%;
+  text-align: center;
+  background: #fff;
+  margin-bottom: 50rpx;
+}
+
+.biger, .desc, .border {
+  display: block;
+}
+
+image {
+  width: 150rpx;
+  height: 150rpx;
+  padding: 20rpx;
+  border-radius: 50%;
+  background: #eee;
+  margin: 30rpx auto;
+}
+
+.mini {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.desc {
+  padding: 0 50rpx;
+  line-height: 50rpx;
+  margin-bottom: 20rpx;
+}
+
+.biger {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+
+.border {
+  border-top: 1px solid #eee;
+  width: 100%;
+  padding: 30rpx;
+  text-align: left;
+}
+
+.border .mini {
+  display: inline;
+}
+
+button {
+  width: 90%;
+  margin-bottom: 30rpx;
+}

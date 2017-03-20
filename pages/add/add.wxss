@@ -1,0 +1,19 @@
+.page {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-t {
+    width: 100%;
+    height: 90%;
+    padding: 20rpx;
+    line-height: 100rpx;
+}
+
+.btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #f88;
+}

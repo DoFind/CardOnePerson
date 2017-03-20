@@ -1,0 +1,13 @@
+<view class="page">
+
+    <view class="msg">
+        <image src="../../img/giraffe.png" mode="aspectFit"></image>
+        <text class="biger">{{name}}</text>
+        <text class="desc mini">{{desc}}</text>
+
+        <text class="border">服务类目 <text class="mini">{{area}}</text></text>
+        <text class="border">主体和开发者信息</text>
+    </view>
+    <button type="primary" size="default" bindtap="toMain">进入小程序</button>
+    <button type="default" bindtap="toFriend">推荐给朋友</button>
+</view>

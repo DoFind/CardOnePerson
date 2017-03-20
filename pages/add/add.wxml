@@ -1,0 +1,17 @@
+<view class="page">
+    <view class="page-t">
+        <textarea auto-height placeholder="请输入文字" value="{{content}}" bindinput="change" />
+    </view>
+
+    <!--<view class="section">
+        <textarea placeholder="这个只有在按钮点击的时候才聚焦" focus="{{focus}}" />
+        <view class="btn-area">
+            <button bindtap="bindButtonTap">使得输入框获取焦点</button>
+        </view>
+    </view>-->
+
+    <view class="btn">
+        <view class="cancel" bindtap="cancel">取消</view>
+        <view class="sure" bindtap="sure">确定</view>
+    </view>
+</view>

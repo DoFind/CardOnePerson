@@ -1,0 +1,18 @@
+{
+  "pages":[
+    "pages/main/main",
+    "pages/success/success",
+    "pages/detail/detail",
+    "pages/create/create",
+    "pages/developer/developer",
+    "pages/test/test",
+    "pages/list/list",
+    "pages/add/add"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#333",
+    "navigationBarTitleText": "打卡",
+    "navigationBarTextStyle":"#fff"
+  }
+}
