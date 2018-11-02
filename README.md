@@ -1,65 +1,14 @@
 # CardOnePerson
-意外的小bug
+> 今天又是元气满满的一天呢
 
-```math
-E = mc^2
-```
+##### 数据存储
+本地保存  `storage`
 
-```
-graph LR
-A-->B
-```
+##### 当前完成功能
+- 创建打卡任务，设置起始时间
+- 打卡
+- 删除打卡任务
 
-```
-sequenceDiagram
-A->>B: How are you?
-B->>A: Great!
-```
+###### markdown 的语法不支持 流程图 序列图 甘特图 数学公式..
+###### showdwon.js 还不支持 table
 
-```
-gantt
-dateFormat YYYY-MM-DD
-section S1
-T1: 2014-01-01, 9d
-section S2
-T2: 2014-01-11, 9d
-section S3
-T3: 2014-01-02, 9d
-```
-
-![易烊千玺](D29FABFE6AD449F683533E73C77FCA30 "易烊千玺")
-[易烊千玺](D29FABFE6AD449F683533E73C77FCA30 "易烊千玺")
-
-header 1 | header 2
----|---
-row 1 col 1 | row 1 col 2
-row 2 col 1 | row 2 col 2
-
-
-```
-<button type='submit' value='click me!' />
-```
-
-- [ ] 安徽
-
-- [x] 成都
-
-
-----
----
-****
-***
-
-
-我要输入一个变量 `a` ahahaha 
-
-> 你说你是风
-
-
-- 哦？
-- 噢
-- 喔
-
-
-1. markdown
-2. 可视化吗
