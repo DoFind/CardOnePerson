@@ -1,47 +1,45 @@
-/* pages/index/index.wxss */
 
 .three-wrap {
-  /* margin: 0 30rpx; */
-  padding: 20rpx 30rpx;
+  margin-top: 10rpx;
+  padding: 30rpx 30rpx;
   border-radius: 10rpx;
-  margin-top: 30rpx;
   background: #fff;
   border-top: 1rpx solid #f4f4f4;
 }
 
 .three-wrap .item {
   display: flex;
-  align-items: center;
   padding: 20rpx 0;
-  border-radius: 10rpx;
-  border-bottom: 2rpx solid #f4f4f4;
+  margin-bottom: 10rpx;
+  background: #eee;
 }
 
 .three-wrap .item .text {
   display: block;
-  /* text-align: center; */
-  line-height: 3;
-  color: #fff;
+  color: #666;
 }
 .three-wrap .item .text1 {
-  width: 80rpx;
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
   text-align: center;
-  border-right: 1rpx solid #f4f4f4;
+  color: #fff;
 }
 .three-wrap .item .text2 {
   flex: 1;
-  padding-left:30rpx;
-  padding-right:30rpx;
+  padding: 0 20rpx 0 30rpx;
+  line-height:60rpx;
   box-sizing:border-box;
-  line-height:2;
+  white-space: wrap;
+  overflow: hidden;
 }
-.three-wrap .item:first-child {
+.three-wrap .item:first-child .text1 {
   background: #efce4a;
 }
-.three-wrap .item:nth-of-type(2) {
+.three-wrap .item:nth-of-type(2) .text1 {
   background: #7fabda;
 }
-.three-wrap .item:nth-of-type(3) {
+.three-wrap .item:nth-of-type(3) .text1 {
   background: #d75a4a;
 }
 
