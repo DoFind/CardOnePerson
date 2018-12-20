@@ -6,7 +6,8 @@
     "pages/index/index",
     "pages/index/create/create",
     "pages/lifelist/main/main",
-    "pages/lifelist/create/create"
+    "pages/lifelist/create/create",
+    "pages/mine/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -35,6 +36,12 @@
         "text": "清单",
         "iconPath": "/img/tab/list.png",
         "selectedIconPath": "/img/tab/list_hl.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我",
+        "iconPath": "/img/tab/me.png",
+        "selectedIconPath": "/img/tab/me_hl.png"
       }
     ]
   }

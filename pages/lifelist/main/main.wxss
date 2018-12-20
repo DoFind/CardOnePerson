@@ -31,7 +31,7 @@
 /* 清除数据 */
 
 .btn-clearall {
-  margin-top: 1000rpx;
+  margin-top: 1200rpx;
   padding: 10px;
   background: #eee;
   text-align: center;

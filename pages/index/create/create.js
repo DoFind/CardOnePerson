@@ -1,4 +1,3 @@
-// pages/index/create/create.js
 Page({
 
   /**

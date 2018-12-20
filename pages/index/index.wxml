@@ -16,6 +16,16 @@
     </view>
   </view>
 
+  <!-- <view class='content-wrap'>
+    <view class='main-title'>好无聊啊，做点什么吧..</view>
+    <view class='box'>
+
+      <view class='result-wrap'>
+        这里是结果
+      </view>
+    </view>
+  </view> -->
+
   <!--创建按钮-->
   <view class="add-btn" bindtap="onAddThreeThings">
     <image src="/img/app.png"></image>
