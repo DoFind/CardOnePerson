@@ -1,7 +1,7 @@
 <view class='main-container'>
 
   <view class='content-wrap'>
-    <view class='main-title'>年度三件大事，非常重要的~</view>
+    <view class='main-title'>三件大事，千万别偏航~</view>
     <view wx:if='{{threeThings.length==0}}' class='three-wrap'>
       <text class='font16 meta'>点击右下角按钮添加三件大事~</text>
     </view>
@@ -15,16 +15,6 @@
       </block>
     </view>
   </view>
-
-  <!-- <view class='content-wrap'>
-    <view class='main-title'>好无聊啊，做点什么吧..</view>
-    <view class='box'>
-
-      <view class='result-wrap'>
-        这里是结果
-      </view>
-    </view>
-  </view> -->
 
   <!--创建按钮-->
   <view class="add-btn" bindtap="onAddThreeThings">
