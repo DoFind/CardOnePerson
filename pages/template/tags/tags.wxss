@@ -1,0 +1,29 @@
+
+.template-tag {
+  padding: 30rpx 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: #eee;
+  border-bottom: 1rpx solid #f4f4f4;
+}
+
+.template-tag .tag {
+
+  height: 30px;
+  line-height: 30px;
+  margin: 5rpx;
+  padding: 0 30rpx;
+  font-size: 16px;
+  white-space: nowrap;
+  background: #ccc;
+  border-radius: 15px;
+  color: #4f4f4f;
+}
+
+.template-tag .active {
+  font-weight: bold;
+  font-size: 18px;
+  background: #efce4a;
+  color: #fff;
+}

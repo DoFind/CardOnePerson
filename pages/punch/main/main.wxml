@@ -1,0 +1,49 @@
+<import src="./item/item.wxml" />
+
+<view class='main-container'>
+
+  <!-- 新用户Tips -->
+  <view wx:if='{{bNew}}' class='desc-wrap'>
+    <view class='text'>一些介绍:</view>
+    <view class='text'>元气打卡，默认周期21天，从当天开始</view>
+    <view class='text'>可自行设置打卡任务期限，或者设置起始时间。也可以设置一个未来计划。</view>
+    <view class='text'>点击右下角添加一个元气打卡计划吧~</view>
+  </view>
+
+  <!-- 正式内容 -->
+  <view wx:else class="main-container">
+    <view wx:if="{{listDoing.length}}" class='punch-list c-doing'>
+      <view class='box-title'>正在进行中</view>
+      <view class="punch-box">
+        <block wx:for="{{listDoing}}" wx:key="{{item.id}}">
+          <template is="punch-item" data="{{...item}}" />
+        </block>
+      </view>
+    </view>
+
+    <view wx:if="{{listComing.length}}" class='punch-list c-coming'>
+      <view class='box-title'>即将开始</view>
+      <view class="punch-box">
+        <block wx:for="{{listComing}}" wx:key="{{item.id}}">
+          <template is="punch-item" data="{{...item}}" />
+        </block>
+      </view>
+    </view>
+
+    <view wx:if="{{listCompleted.length}}" class='punch-list c-completed'>
+      <view class='box-title'>已结束</view>
+      <swiper indicator-dots="true" autoplay="true">
+        <block wx:for="{{listCompleted}}" wx:key="{{item.id}}">
+          <swiper-item>
+            <template is="punch-item" data="{{...item}}" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+
+  <!--添加创建新活动-->
+  <view class="add-btn" bindtap="add">
+    <image src="/img/app.png"></image>
+  </view>
+</view>

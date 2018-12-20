@@ -1,0 +1,54 @@
+<view class="detail-container">
+
+  <!-- 任务详情 -->
+  <view class='box-general {{stateColorClass}}'>
+    <view class='info'>
+      <view class='title'>{{title}}</view>
+      <view>{{content}}</view>
+      <view>創建于: {{createTime}}</view>
+      <view>堅持中: {{beginDate}} —— {{endDate}}</view>
+    </view>
+    <view class='btn-cancel' bindtap="stopActivity">刪除打卡計劃</view>
+  </view>
+
+  <!-- 打卡总览 -->
+  <view class='box-punchinfo'>
+    <view class='title'>已打卡
+      <text class="f-red">{{punchCount}}</text> /
+      <text class='f-dark'>{{sumDays}}</text> 次
+    </view>
+    <view class='list'>
+      <block wx:for="{{activity}}" wx:key="{{item}}">
+        <image wx:if="{{item}}" class="item active" src='/img/dot_hl.png'></image>
+        <image wx:else class="item" src='/img/dot.png'></image>
+      </block>
+    </view>
+  </view>
+  <!-- 最长累计打卡天数 -->
+  <view class='box-punchinfo'>
+    <view class='title'>最长连续打卡 
+      <text class='f-red'>{{serialMaxDays}}</text> 天
+    </view>
+  </view>
+  <!-- 勋章详情 -->
+  <view class='box-punchinfo'>
+    <view class='title'>勋章 
+      <text class='f-red'>{{medalCount}}</text> 枚 <text class='small'>连续打卡 7 天可得</text>
+    </view>
+  </view>
+  <!-- 打卡详情 -->
+  <view class='box-punchinfo'>
+    <view class='title'>打卡详情</view>
+    <view class='list'>
+      <block wx:for="{{arrRecord}}" wx:key="{{item.index}}">
+        <view class='item2'>
+          <text>{{item.date}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+
+<view class="createM">
+  <button type="primary" size="default" disabled="{{disabled}}" bindtap="signIn">{{btnState}}</button>
+</view>

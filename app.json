@@ -1,18 +1,48 @@
 {
-  "pages":[
-    "pages/main/main",
-    "pages/success/success",
-    "pages/detail/detail",
-    "pages/create/create",
-    "pages/developer/developer",
-    "pages/test/test",
-    "pages/list/list",
-    "pages/add/add"
+  "pages": [
+    "pages/punch/main/main",
+    "pages/punch/create/create",
+    "pages/punch/detail/detail",
+    "pages/lifelist/main/main",
+    "pages/lifelist/create/create",
+    "pages/index/index",
+    "pages/index/create/create",
+    "pages/mine/index"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#333",
-    "navigationBarTitleText": "打卡",
-    "navigationBarTextStyle":"#fff"
+    "navigationBarTitleText": "元氣打卡計劃",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#1f4ba5",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "计划",
+        "iconPath": "/img/tab/things.png",
+        "selectedIconPath": "/img/tab/things_hl.png"
+      },
+      {
+        "pagePath": "pages/punch/main/main",
+        "text": "打卡",
+        "iconPath": "/img/tab/punch.png",
+        "selectedIconPath": "/img/tab/punch_hl.png"
+      },
+      {
+        "pagePath": "pages/lifelist/main/main",
+        "text": "清单",
+        "iconPath": "/img/tab/list.png",
+        "selectedIconPath": "/img/tab/list_hl.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我",
+        "iconPath": "/img/tab/me.png",
+        "selectedIconPath": "/img/tab/me_hl.png"
+      }
+    ]
   }
 }

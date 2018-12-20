@@ -1,0 +1,40 @@
+@import "./item/item.wxss";
+
+
+/* 还没东西时的介绍 */
+.desc-wrap {
+  padding: 50rpx;
+}
+.desc-wrap .text {
+  line-height: 2;
+  font-size: 16px;
+  color: #333;
+}
+
+/* 打卡 list */
+.punch-list {
+  padding-top: 30rpx;
+  width: 750rpx;
+}
+
+.punch-list .box-title {
+  
+  padding-left: 30rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 24px;
+  color: #fff;
+}
+
+.punch-box {
+  display: flex;
+  flex-direction: column;
+  margin: 30rpx auto;
+  width: 700rpx;
+}
+
+.punch-list swiper {
+  margin: 30rpx auto;
+  width: 700rpx;
+  height: 330rpx;
+}

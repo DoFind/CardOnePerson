@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "tags": "../../template/tags/tags",
+    "todo": "../../template/todo/todo"
+  }
+}

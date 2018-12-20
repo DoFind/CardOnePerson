@@ -1,0 +1,16 @@
+<view class='main-container'>
+  <view class='main-title'>写下本年度最重要的 3 件事</view>
+  <form bindsubmit='submitThreeThings' class='form-wrap'>
+
+    <block wx:for='{{[1,2,3]}}'>
+      <view class='box'>
+        <text>第 {{item}} 件事情：</text>
+        <input name='item-{{item}}' value="{{threeThings?threeThings[index]:''}}">啥？</input>
+      </view>
+    </block>
+
+    <view class="createM">
+      <button formType="submit" type="primary" size="default">提交</button>
+    </view>
+  </form>
+</view>

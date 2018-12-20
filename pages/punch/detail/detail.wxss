@@ -1,0 +1,93 @@
+.detail-container {
+  width: 750rpx;
+  /* margin-bottom: 180rpx; */
+  padding-bottom: 180rpx;
+  overflow-x: hidden;
+}
+
+.box-general {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50rpx;
+  border-bottom: 2rpx solid #eee;
+}
+
+.box-general .info {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 30rpx;
+}
+
+.box-general .info view {
+  line-height: 70rpx;
+  font-size: 30rpx;
+  letter-spacing: 2rpx;
+  color: #fff;
+}
+
+.box-general .info view.title {
+  line-height: 90rpx;
+  font-size: 24px;
+  letter-spacing: 4rpx;
+}
+
+.box-general .btn-cancel {
+  margin: 30rpx;
+  padding: 20rpx 30rpx;
+  border-radius: 10rpx;
+  text-align: right;
+  font-size: 30rpx;
+  background: #df2d4f;
+  color: #fff;
+}
+
+/* 打卡情况一览 */
+
+.box-punchinfo {
+  padding-top: 50rpx;
+  padding-left: 30rpx;
+}
+
+.box-punchinfo .title {
+  color: #666;
+  font-size: 20px;
+  letter-spacing: 2rpx;
+}
+.box-punchinfo .title .small {
+  color: #999;
+  font-size: 16px;
+}
+
+.box-punchinfo .title .f-red {
+  color: #df2d4f;
+  font-weight: 600;
+}
+
+.box-punchinfo .title .f-dark {
+  color: #333;
+}
+
+.box-punchinfo .list {
+  margin-top: 30rpx;
+  overflow: hidden;
+  clear: both;
+}
+
+.box-punchinfo .list .item {
+  float: left;
+  margin: 0 20rpx 20rpx 0;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.box-punchinfo .list .item2 {
+  
+  height: 60rpx;
+  line-height: 60rpx;
+  letter-spacing: 1rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+.box-punchinfo .list .item2 text {
+  padding-left: 4rpx;
+}

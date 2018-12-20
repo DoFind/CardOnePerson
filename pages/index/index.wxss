@@ -1,0 +1,56 @@
+/* pages/index/index.wxss */
+
+.three-wrap {
+  /* margin: 0 30rpx; */
+  padding: 20rpx 30rpx;
+  border-radius: 10rpx;
+  margin-top: 30rpx;
+  background: #fff;
+  border-top: 1rpx solid #f4f4f4;
+}
+
+.three-wrap .item {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+  border-radius: 10rpx;
+  border-bottom: 2rpx solid #f4f4f4;
+}
+
+.three-wrap .item .text {
+  display: block;
+  /* text-align: center; */
+  line-height: 3;
+  color: #fff;
+}
+.three-wrap .item .text1 {
+  width: 80rpx;
+  text-align: center;
+  border-right: 1rpx solid #f4f4f4;
+}
+.three-wrap .item .text2 {
+  flex: 1;
+  padding-left:30rpx;
+  padding-right:30rpx;
+  box-sizing:border-box;
+  line-height:2;
+}
+.three-wrap .item:first-child {
+  background: #efce4a;
+}
+.three-wrap .item:nth-of-type(2) {
+  background: #7fabda;
+}
+.three-wrap .item:nth-of-type(3) {
+  background: #d75a4a;
+}
+
+.three-wrap .item .text:first-child {
+  font-weight: bold;
+}
+
+.three-wrap .meta {
+  text-align: center;
+  line-height: 3;
+  color: #666;
+}

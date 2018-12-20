@@ -1,0 +1,40 @@
+/* 还没东西时的介绍 */
+
+.desc-wrap {
+  padding: 50rpx;
+}
+
+.desc-wrap .text {
+  line-height: 2;
+  font-size: 16px;
+  color: #333;
+}
+
+/* 清单 .list .list-item */
+
+.list-all {
+  padding: 20rpx 0 40rpx;
+}
+
+.list-all .tag {
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(192, 113, 113);
+  padding: 30rpx 0 10rpx 40rpx;
+}
+
+.list {
+  padding: 20rpx 0;
+}
+
+
+/* 清除数据 */
+
+.btn-clearall {
+  margin-top: 1000rpx;
+  padding: 10px;
+  background: #eee;
+  text-align: center;
+  font-size: 16px;
+  color: #f00;
+}

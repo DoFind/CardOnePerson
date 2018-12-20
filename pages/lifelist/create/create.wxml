@@ -1,0 +1,50 @@
+<view class='container'>
+
+  <view class='main-title'>创建一个新的待办</view>
+
+
+  <form bindsubmit='onSubmit'>
+
+    <view class='box'>
+      <text class='text'>标题</text>
+      <input name='title'></input>
+    </view>
+    <view class='box'>
+      <text class='text'>描述</text>
+      <textarea name='desc'></textarea>
+    </view>
+    <view class='box'>
+      <text class='text'>选择一个标签</text>
+      <checkbox-group name='tags' bindchange="checkboxChange">
+        <view class='checkbox-wrap'>
+          <label class='checkbox-label' wx:for="{{tags}}">
+            <checkbox hidden value="{{item.name}}" checked="{{item.checked}}"></checkbox>
+            <text class="checkbox-text {{item.checked ? 'checkbox-text-checked': ''}}">{{item.value}}</text>
+          </label>
+        </view>
+      </checkbox-group>
+      <view class='btn btn-add' bindtap='onAddTag'>+</view>
+      <!-- <view class='btn btn-modify' bindtap='onAddTag'>编辑标签</view> -->
+    </view>
+    <view class="createM">
+      <button formType="submit" type="primary" size="default">提交</button>
+    </view>
+  </form>
+
+  <view hidden='{{bHideAddPanel}}' class='panel-add-tag'>
+    <form bindsubmit='onAddToTags'>
+      <view class='form'>
+        <view class='text'>添加一个新标签</view>
+        <input name='addTag'></input>
+        <view class='text-warning'>敬告：标签暂不可编辑删除，请谨慎添加</view>
+      </view>
+      <view class="createM">
+        <button formType="submit" type="primary" size="default">提交</button>
+      </view>
+    </form>
+  </view>
+
+  <!-- <view hidden='{{hHideOpPanel}}'>
+    标签列表，，，直接 删除del 和 修改modify del 只要没内容直接删 modify 这个麻烦了..... list-item 的 tags 里存的不该是 标签名，而是 标签id
+  </view> -->
+</view>

@@ -1,0 +1,95 @@
+.list-item {
+  position: relative;
+  margin-left: 50rpx;
+  margin-right: 58rpx;
+  padding: 5rpx 0;
+  line-height: 52rpx;
+}
+
+.item-box {
+  display: flex;
+}
+
+.item-box .checkbox {
+  width: 52rpx;
+  height: 52rpx;
+  line-height: 52rpx;
+}
+.item-box .checkbox image {
+  width: 30rpx;
+  height: 26rpx;
+}
+
+.list-item .name {
+  width: 500rpx;
+  font-size: 16px;
+  color: #333;
+}
+
+
+/* 完成状态 */
+.list-item.done .name, .list-item.done .text {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* 详情 */
+.desc-box .desc {
+  margin-left: 54rpx;
+  margin-top: 10rpx;
+  font-size: 14px;
+  color: #444;
+}
+
+.desc-box .edit {
+  position: absolute;
+  right: 10rpx;
+  top: 0;
+  width: 60rpx;
+  height: 60rpx;
+  text-align: center;
+  border-radius: 50%;
+  background: #e5ebe7;
+}
+
+.desc-box .edit image {
+  margin-top: 11rpx;
+  margin-left: 8rpx;
+  width: 40rpx;
+  height: 37rpx;
+}
+
+
+.editor-box {
+  position: absolute;
+  left: 50rpx;
+  top: -4rpx;
+  display: flex;
+  height: 80rpx;
+}
+
+.editor-box .editor {
+  margin-right: 20rpx;
+  padding: 0 4rpx;
+  width: 500rpx;
+  height: 60rpx;
+  border: 1px solid #999;
+  font-size: 16px;
+  color: #333;
+  background: #fff;
+  border-radius: 8rpx;
+}
+
+.editor-box .del {
+  width: 60rpx;
+  height: 60rpx;
+  text-align: center;
+  border-radius: 50%;
+  background: #d75a4a;
+}
+
+.editor-box .del image {
+  margin-top: 10rpx;
+  width: 40rpx;
+  height: 40rpx;
+}

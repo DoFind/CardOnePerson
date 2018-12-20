@@ -1,0 +1,24 @@
+<view class="list-item {{item.state == 2?'done':''}}">
+
+  <view class='item-box'>
+    <view class='checkbox' data-id='{{item.id}}' data-state='{{item.state}}' bindtap='onChangeDoneState'>
+      <image src="{{item.state == 2?'/img/icon/done.gif':'/img/icon/undone.gif'}}" class="checkbox" />
+    </view>
+    <text class='name' bindtap='onShowDesc'>{{item.title}}</text>
+  </view>
+
+  <view class='desc-box' hidden='{{bHideDesc}}'>
+    <view class='desc'>{{item.desc}}</view>
+    <view class='edit' data-id='{{item.id}}' bindtap='onShowEdit' hidden='{{!bHideEdit}}'>
+      <image src='/img/icon/edit.png'></image>
+    </view>
+  </view>
+
+  <view class='editor-box' hidden='{{bHideEdit}}'>
+    <input class='editor' type='text' focus='{{focus}}' value='{{item.title}}' data-id='{{item.id}}' bindblur='onEditEnd' />
+    <view class='del' data-id='{{item.id}}' bindtap='onDelete'>
+      <image src='/img/icon/del.png'></image>
+    </view>
+  </view>
+
+</view>

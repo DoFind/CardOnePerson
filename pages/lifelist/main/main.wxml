@@ -1,0 +1,50 @@
+<!-- lifelist 生活清单 -->
+<!-- 紧急的事情无需列 -->
+<!-- 第二类事务： 重要但不紧急 -->
+<!-- 第四类事务： 不重要且不紧急 -->
+<!-- 大分类(推荐标签)
+      读书（书的类别） 
+      玩耍（剧 漫 电影 综艺...） 
+      购物 (家居 护肤 美妆 生活小工具) -->
+
+<view class='main-container'>
+
+  <view wx:if='{{bNew}}' class='desc-wrap'>
+    <view class='text'>一些介绍:</view>
+    <view class='text'>列个清单，明晰一下未来要做的事情</view>
+    <view class='text'>可以是人生目标清单，读书清单，购物清单，或者休闲看剧清单等</view>
+    <view class='text'>点击右下角添加一个待办吧~</view>
+  </view>
+
+  <view wx:else>
+    <view class='lifelist-wrap'>
+      <view class='main-title'>全部清单</view>
+      <view class='main-content'>
+        
+        <tags tags='{{tags}}' curTag='{{curTag}}' bind:showAll='showAll' bind:showCateContent='showCateContent' />
+        
+        <view class='list list-all' hidden="{{curTag!='全部'}}">
+          <block wx:for='{{allList}}'>
+            <view class='tag'>{{index}}</view>
+            <block wx:for='{{item}}'>
+              <todo item='{{item}}' bind:onDelete='onDelete' bind:onEditEnd='onEditEnd' bind:onChangeDoneState='onChangeDoneState'/>
+            </block>
+          </block>
+        </view>
+
+        <view class='list' hidden="{{curTag=='全部'}}">
+          <block wx:for='{{lifeList}}'>
+            <todo item='{{item}}' bind:onDelete='onDelete' bind:onEditEnd='onEditEnd' bind:onChangeDoneState='onChangeDoneState'/>
+          </block>
+        </view>
+      </view>
+
+      <view class='btn-clearall' bindtap='clearAllData'>清除当前页所有数据，包括新增标签</view>
+    </view>
+  </view>
+
+  <!--添加创建新活动-->
+  <view class="add-btn" bindtap="onAddLifelist">
+    <image src="/img/app.png"></image>
+  </view>
+</view>

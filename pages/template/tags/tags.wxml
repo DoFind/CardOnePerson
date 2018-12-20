@@ -1,0 +1,8 @@
+<!-- <scroll-view scroll-x='true' class='template-tag'> -->
+<view class='template-tag'>
+  <text class="tag {{curTag=='全部' ? 'active' : ''}}" bindtap='showAll'>全部</text>
+  <block wx:for='{{tags}}'>
+    <text class="tag {{curTag==item ? 'active' : ''}}" data-tag='{{item}}' bindtap='showCateContent'>{{item}}</text>
+  </block>
+</view>
+<!-- </scroll-view> -->

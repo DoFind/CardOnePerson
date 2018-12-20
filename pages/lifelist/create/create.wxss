@@ -1,0 +1,96 @@
+.container {
+  width: 750rpx;
+  min-height: 100%;
+  overflow-x: hidden;
+  padding-bottom: 200rpx;
+}
+
+.text {
+  font-size: 34rpx;
+  line-height: 2;
+  color: #555;
+}
+.text-warning {
+  font-size: 24rpx;
+  line-height: 2;
+  color: rgb(226, 85, 85);
+}
+
+input,
+textarea {
+  border: 1px solid #eee;
+  border-radius: 8rpx;
+  padding: 10rpx;
+  font-size: 16px;
+  color: #666;
+}
+
+textarea {
+  width: auto;
+  height: 200rpx;
+}
+
+/* 选择标签区域 */
+.checkbox-wrap {
+  /* margin-bottom: 10px; */
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.checkbox-label {
+  position: relative;
+  height: 30px;
+  line-height: 30px;
+  padding-right: 10rpx;
+  padding-bottom: 10rpx;
+  white-space: nowrap;
+  font-size: 16px;
+  color: #4f4f4f;
+}
+
+.checkbox-text {
+  display: inline-block;
+  height: 100%;
+  padding: 0 20rpx;
+  text-align: center;
+  border-radius: 15px;
+  background: #eee;
+}
+
+.checkbox-text-checked {
+  background: #efce4a;
+  color: #fff;
+}
+
+/* 功能按钮 */
+.btn {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-weight: bolder;
+  color: #4f4f4f;
+}
+.btn-add {
+  width: 40px;
+  font-size: 30px;
+}
+.btn-modify {
+  padding: 0 10px;
+  font-size: 18px;
+}
+
+/* 添加一个新标签 Panel */
+.panel-add-tag {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 750rpx;
+  height: 100%;
+  background: #fff;
+  z-index: 10;
+}
+
+.panel-add-tag .form {
+  margin: 80% 70rpx 0;
+}

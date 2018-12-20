@@ -1,0 +1,10 @@
+<template name="punch-item">
+  <view class="punch-item" bindtap="edit" data-id="{{id}}">
+    <view class='wrap'>
+      <text class='name'>{{title}}</text>
+      <button class='btn' type="primary" size="mini" disabled="{{disabled}}" data-id="{{id}}" data-begin="{{beginTime}}" catchtap="signIn">{{btnState}}</button>
+      <view class="time" wx:if="{{beginShow}}">开始时间：{{beginTime}}</view>
+      <view class="time" wx:else>结束时间：{{endTime}}</view>
+    </view>
+  </view>
+</template>
