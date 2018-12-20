@@ -3,10 +3,10 @@
     "pages/punch/main/main",
     "pages/punch/create/create",
     "pages/punch/detail/detail",
-    "pages/lifelist/main/main",
-    "pages/lifelist/create/create",
     "pages/index/index",
     "pages/index/create/create",
+    "pages/lifelist/main/main",
+    "pages/lifelist/create/create",
     "pages/mine/index"
   ],
   "window": {

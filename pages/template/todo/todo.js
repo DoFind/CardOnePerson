@@ -1,4 +1,3 @@
-// pages/template/todo/todo.js
 Component({
   /**
    * 组件的属性列表
