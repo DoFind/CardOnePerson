@@ -37,5 +37,9 @@
 ## 关于作者
 
 - 个人主页 [https://www.freedays.cc](https://www.freedays.cc)
-- 个人公众号，随意关注  ![个人公众号](img/cc.jpg)
-- 微信请嗑瓜子 ![微信打赏二维码](img/ds.jpg)
+- 个人公众号，随意关注  
+   
+  ![个人公众号](img/cc.jpg)
+- 微信请嗑瓜子 
+
+  ![微信打赏二维码](img/ds.jpg)
