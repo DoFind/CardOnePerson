@@ -9,16 +9,26 @@
 
   <view class='desc-box' hidden='{{bHideDesc}}'>
     <view class='desc'>{{item.desc}}</view>
-    <view class='edit' data-id='{{item.id}}' bindtap='onShowEdit' hidden='{{!bHideEdit}}'>
-      <image src='/img/icon/edit.png'></image>
-    </view>
+    <block hidden='{{!bHideEdit}}'>
+      <view class='edit' data-id='{{item.id}}' bindtap='onShowEdit'>
+        <image src='/img/icon/edit.png'></image>
+      </view>
+      <view class='del' data-id='{{item.id}}' bindtap='onDelete'>
+        <image src='/img/icon/del.png'></image>
+      </view>
+    </block>
   </view>
 
-  <view class='editor-box' hidden='{{bHideEdit}}'>
-    <input class='editor' type='text' focus='{{focus}}' value='{{item.title}}' data-id='{{item.id}}' bindblur='onEditEnd' />
-    <view class='del' data-id='{{item.id}}' bindtap='onDelete'>
-      <image src='/img/icon/del.png'></image>
+  <form hidden='{{bHideEdit}}' bindsubmit='onEditEnd'>
+    <view class='editor-box'>
+      <view class='text'>标题</view>
+      <input hidden='true' type='hidden' name='id' value='{{item.id}}' />
+      <input class='editor' type='text' name='title' value='{{item.title}}' 
+        focus='{{focus}}' />
+      <view class='text'>描述</view>
+      <textarea class='editor' name='desc' value='{{item.desc}}'></textarea>
+      <button form-type='submit' type='primary'>确认</button>
     </view>
-  </view>
 
+  </form>
 </view>

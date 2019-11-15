@@ -12,6 +12,7 @@ Page({
     OriginList: [],
     // 全部的信息分类显示....
     allList: {},
+    bNew: false,
 
     tags: [],
     curTag: '全部',
@@ -50,18 +51,18 @@ Page({
     wx.removeStorageSync('lifeList');
   },
 
-  isEmptyObject: function(obj){
+  isEmptyObject: function(obj) {
 
-    for(var key in obj){
+    for (var key in obj) {
       return false;
     };
-    return true;  
+    return true;
   },
 
   initLifeList: function(tag) {
     // console.log('initLifeList', tag);
     if (tag) {
-      
+
       if (tag == '全部') {
         this.setData({
           allList: this.getAllList(),
@@ -70,7 +71,7 @@ Page({
       } else {
         // 这里需要重新获取最新数据，因为有添加
         var allList = this.getAllList();
-        if (!this.isEmptyObject(allList)){
+        if (!this.isEmptyObject(allList)) {
           this.setData({
             allList: allList,
             lifeList: allList[tag],
@@ -93,12 +94,18 @@ Page({
     }
   },
 
-  getAllList: function(){
+  getAllList: function() {
     // init 完全...
     var lifeList = wx.getStorageSync('lifeList');
 
+    // var f = !!lifeList;
+    // console.log(lifeList);
+    // console.log(lifeList.objs.length);
+    // console.log('bOld', f);
+
     this.setData({
-      OriginList: lifeList
+      OriginList: lifeList,
+      bNew: !(lifeList)
     });
 
     var allList = {};
@@ -139,21 +146,6 @@ Page({
     })
   },
 
-  onChangeDoneState: function(event) {
-
-    var id = event.detail.id;
-    var state = event.detail.state;
-    // console.log('done', id, state);
-    state = state == 0?2:0;
-
-    // 上次存储的信息
-    var OriginList = this.data.OriginList;
-    OriginList.objs[id].state = state;
-
-    wx.setStorageSync('lifeList', OriginList);
-    this.initLifeList(this.data.curTag);
-  },
-
   // 显示全部内容
   showAll: function(event) {
     this.setData({
@@ -171,21 +163,43 @@ Page({
     var allList = this.data.allList;
 
     //  数据不够xin.....
-    if (allList[tag]){
+    if (allList[tag]) {
 
       // console.log(allList[tag]);
       this.setData({
         lifeList: allList[tag],
         curTag: tag
       })
-    }
-    else {
+    } else {
       this.setData({
         lifeList: [],
         curTag: tag
       })
     }
   },
+
+  // 完成状态切换
+  onChangeDoneState: function (event) {
+
+    var id = event.detail.id;
+    var state = event.detail.state;
+    // console.log('done', id, state);
+    state = state == 0 ? 2 : 0;
+
+    // 上次存储的信息
+    var OriginList = this.data.OriginList;
+    OriginList.objs[id].state = state;
+
+    wx.setStorageSync('lifeList', OriginList);
+    this.initLifeList(this.data.curTag);
+  },
+
+  // 显示详情，显示本条会隐藏上一条
+  // onShowEdit: function(event) {
+  //   var lastId = event.detail.lastId;
+
+  //   console.log('main-lstid',lastId)
+  // },
 
   // 删除
   onDelete: function(event) {
@@ -198,11 +212,15 @@ Page({
   },
 
   // 修改编辑结束
-  onEditEnd: function (event) {
+  onEditEnd: function(event) {
 
+    console.log('editEnd',event.detail);
     var id = event.detail.id;
+
     var lifeList = wx.getStorageSync('lifeList');
     lifeList.objs[id].title = event.detail.title;
+    lifeList.objs[id].desc = event.detail.desc;
+    
     wx.setStorageSync('lifeList', lifeList);
     this.initLifeList(this.data.curTag);
   },
@@ -217,10 +235,10 @@ Page({
       tags: [],
       // curTag: '全部',
       bHideDesc: true,
-      strText: '显示描述详情'
+      strText: '显示描述详情',
+      bNew: true
     });
     this.initTags();
     this.initLifeList();
   }
 })
-

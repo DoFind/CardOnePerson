@@ -1,0 +1,33 @@
+<view class="main-container">
+  <view class="box-title">创建打卡任务</view>
+  <view class="input-box name">
+    <input type="text" value="{{title}}" bindblur="titleChange" />
+  </view>
+  <view class="input-box content">
+    <textarea value="{{content}}" bindblur="contentChange" />
+  </view>
+
+  <!-- 活動時間 -->
+  <view class='time-box'>
+    <view class='box-title'>活动时间</view>
+    <view class='duration-time'>
+      <input type='text' value='{{sumDays}}' bindblur='sumDaysChange'></input>
+      <text>天元气计划 </text>
+      <text>( 也可直接设置结束日期 )</text>
+    </view>
+    <view class="input-box">
+      <view class="time-list">
+        <text class="title">开始时间</text>
+        <!-- <block wx:if='{{state}}'> -->
+        <picker class="date" mode="date" value="{{beginDate}}" bindchange="bindBeginDateChange" disabled='true'>{{beginDate}}</picker>
+      </view>
+      <view class="time-list">
+        <text class="title">结束时间</text>
+        <picker class="date" mode="date" value="{{endDate}}" bindchange="bindEndDateChange">{{endDate}}</picker>
+      </view>
+    </view>
+  </view>
+  <view class="createM">
+    <button type="primary" size="default" bindtap="editActivity">确认修改</button>
+  </view>
+</view>

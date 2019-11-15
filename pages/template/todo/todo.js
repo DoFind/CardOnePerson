@@ -1,3 +1,4 @@
+// pages/template/todo/todo.js
 Component({
   /**
    * 组件的属性列表
@@ -5,7 +6,8 @@ Component({
   properties: {
     item: {
       type: JSON,
-      value: {}
+      value: {},
+
     }
   },
 
@@ -16,16 +18,36 @@ Component({
     bHideDesc: true,
     bHideEdit: true,
     focus: false,
-    originTitle: ''
+    // originTitle: ''
   },
 
   // 生命周期函数
   lifetimes: {
-    ready: function () {
+    // ready: function() {
+    //   this.setData({
+    //     originTitle: this.data.item.title
+    //   })
+    // },
+
+    // show: function(){
+    //   console.log('show');
+      
+    // }
+  },
+
+  pageLifetimes: {
+    hide() {
+      // 页面被隐藏
       this.setData({
-        originTitle: this.data.item.title
+        bHideDesc: true,
+        bHideEdit: true,
+        focus: false,
       })
     },
+    resize(size) {
+      // 页面尺寸变化
+      console.log('resize');
+    }
   },
 
   /**
@@ -34,23 +56,33 @@ Component({
   methods: {
 
     // 显示详情，编辑按钮
-    onShowDesc: function (event) {
+    onShowDesc: function(event) {
 
       var bHide = !this.data.bHideDesc;
 
       this.setData({
-        bHideDesc: bHide
+        bHideDesc: bHide,
+        bHideEdit: bHide ? true : this.data.bHideEdit
       })
     },
 
     // 显示编辑框
-    onShowEdit: function (event) {
+    onShowEdit: function(event) {
       var bHide = !this.data.bHideEdit;
       var focus = !bHide;
+      var lastId = this.data.lastId;
 
+      // if (!!lastId) {
+      //   var myEventDetail = {
+      //     lastId: lastId
+      //   };
+      //   this.triggerEvent('onShowEdit', myEventDetail, {});
+      // }
+      
       this.setData({
         bHideEdit: bHide,
-        focus: focus
+        focus: focus,
+        // lastId: event.currentTarget.dataset.id
       })
     },
 
@@ -76,7 +108,7 @@ Component({
       this.triggerEvent('onDelete', myEventDetail, {})
     },
 
-    // 编辑结束
+    // 提交编辑表单
     onEditEnd: function(event) {
 
       this.setData({
@@ -85,20 +117,23 @@ Component({
         focus: false
       })
 
-      var originTitle = this.data.originTitle;
-      var title = event.detail.value.trim();
+      var value = event.detail.value;
+      var title = value.title.trim();
 
-      if (originTitle == title ){
-        return;
+      if (title.length > 0) {
+        var myEventDetail = {
+          id: value.id,
+          title: title,
+          desc: value.desc.trim()
+        }
+        this.triggerEvent('onEditEnd', myEventDetail, {})
+
+      } else {
+        wx: wx.showToast({
+          title: '标题不可为空',
+          image: '/img/icon/warning.png'
+        })
       }
-      this.setData({
-        originTitle: title
-      })
-      var myEventDetail = {
-        id: event.currentTarget.dataset.id,
-        title: title
-      }
-      this.triggerEvent('onEditEnd', myEventDetail, {})
     }
   }
 })

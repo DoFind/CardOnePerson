@@ -4,8 +4,8 @@ Page({
 
   data: {
 
-    // 活动状态
-    state: '',
+    // 活动状态 0(未开始) 1(进行中) 2(已结束)
+    state: 0,
     btnState: '',
     disabled: false,
 
@@ -43,8 +43,7 @@ Page({
             beginDate: beginDate,
             endDate: endDate,
 
-            // state: 如果需要活动角标的话...
-            // state: util.getTaskState(iTaskState),
+            state: iTaskState,
             stateColorClass: util.getTaskColorClass(iTaskState),
             // btnState: 按钮文字
             btnState: util.getBtnText(iTaskState, bPunched),
@@ -74,12 +73,15 @@ Page({
 
     // 最长累计打卡天数
     var serialMaxDays = data.serialMaxDays ? data.serialMaxDays : 0;
-    
+
     // 勋章 data.medalCount 
     var medalCount = data.medalCount ? data.medalCount : 0;
+    var arrMedal = [];
+    for (var i = 0; i < medalCount; i++) arrMedal.push(1);
 
     // 打卡已持续天数 data.lastedDays
-    var lastedDays = util.getSumDays(this.data.beginDate, util.formatDate(new Date()));
+    var endD = util.compareDate(this.data.endDate, new Date()) > 0 ? util.formatDate(new Date()) : this.data.endDate;
+    var lastedDays = util.getSumDays(this.data.beginDate, endD);
 
     var d = [];
     for (var i = 0; i < lastedDays; i++) {
@@ -95,9 +97,18 @@ Page({
     this.setData({
       punchCount: punchCount,
       medalCount: medalCount,
+      arrMedal: arrMedal,
       serialMaxDays: serialMaxDays,
       activity: d,
       arrRecord: arrRecord
+    })
+  },
+
+  // 编辑活动
+  editActivity() {
+
+    wx.redirectTo({
+      url: '../edit/edit?id=' + this.data.id +'&state='+this.data.state,
     })
   },
 

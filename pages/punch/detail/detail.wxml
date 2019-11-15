@@ -8,6 +8,7 @@
       <view>創建于: {{createTime}}</view>
       <view>堅持中: {{beginDate}} —— {{endDate}}</view>
     </view>
+    <view wx:if='{{state<2}}' class='btn-edit' bindtap='editActivity'><image src='/img/icon/edit_w2.png'></image></view>
     <view class='btn-cancel' bindtap="stopActivity">刪除打卡計劃</view>
   </view>
 
@@ -34,6 +35,11 @@
   <view class='box-punchinfo'>
     <view class='title'>勋章 
       <text class='f-red'>{{medalCount}}</text> 枚 <text class='small'>连续打卡 7 天可得</text>
+    </view>
+    <view class='medal'>
+      <block wx:for="{{arrMedal}}">
+        <image src='/img/medal.png'></image>
+      </block>
     </view>
   </view>
   <!-- 打卡详情 -->

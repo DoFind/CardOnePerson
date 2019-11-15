@@ -9,6 +9,11 @@
   font-size: 16px;
   color: #333;
 }
+.desc-wrap .big-text {
+  line-height: 3;
+  font-size: 20px;
+  font-weight: bold;
+}
 
 /* 清单 .list .list-item */
 
@@ -31,7 +36,7 @@
 /* 清除数据 */
 
 .btn-clearall {
-  margin-top: 1000rpx;
+  margin-top: 1100rpx;
   padding: 10px;
   background: #eee;
   text-align: center;

@@ -1,13 +1,14 @@
 /* 一些测试样式 */
 
 .box {
-  padding: 20rpx 40rpx;
+  padding: 10rpx 40rpx 20rpx;
   border-radius: 20rpx;
   background: #fff;
 }
 .main-title {
-  padding: 50rpx 20rpx 20rpx 40rpx;
+  padding: 30rpx 20rpx 20rpx 40rpx;
   font-size: 22px;
+  /* font-weight: bold; */
   color: #333;
 }
 .flex-column {

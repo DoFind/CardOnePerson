@@ -4,10 +4,11 @@
 
   <!-- 新用户Tips -->
   <view wx:if='{{bNew}}' class='desc-wrap'>
-    <view class='text'>一些介绍:</view>
-    <view class='text'>元气打卡，默认周期21天，从当天开始</view>
-    <view class='text'>可自行设置打卡任务期限，或者设置起始时间。也可以设置一个未来计划。</view>
-    <view class='text'>点击右下角添加一个元气打卡计划吧~</view>
+    <view class='text big-text'>元气打卡介绍:</view>
+    <view class='text'>默认周期为21天，创建之日为起始时间</view>
+    <view class='text'>可设置打卡任务的持续周期</view>
+    <view class='text'>也可设置打卡任务的起止时间</view>
+    <view class='text'>点击右下角按钮添加一个打卡计划吧~</view>
   </view>
 
   <!-- 正式内容 -->
@@ -32,13 +33,18 @@
 
     <view wx:if="{{listCompleted.length}}" class='punch-list c-completed'>
       <view class='box-title'>已结束</view>
-      <swiper indicator-dots="true" autoplay="true">
-        <block wx:for="{{listCompleted}}" wx:key="{{item.id}}">
-          <swiper-item>
-            <template is="punch-item" data="{{...item}}" />
-          </swiper-item>
-        </block>
-      </swiper>
+      <view class='punch-box'>
+        <view class='punch-item'>
+          <swiper autoplay="true" interval="12000">
+            <block wx:for="{{listCompleted}}" wx:key="{{item.id}}">
+              <swiper-item>
+                <template is="punch-item" data="{{...item}}" />
+              </swiper-item>
+            </block>
+          </swiper>
+        </view>
+      </view>
+
     </view>
   </view>
 

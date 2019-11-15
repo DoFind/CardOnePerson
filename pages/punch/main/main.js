@@ -4,17 +4,6 @@ var util = require("../../../utils/util.js");
 
 Page({
   data: {
-    example: {
-      listCompleted: [{
-
-      }],
-      listDoing: [{
-
-      }],
-      listComing: [{
-
-      }]
-    },
     listCompleted: [],
     listDoing: [],
     listComing: [],
@@ -73,7 +62,7 @@ Page({
     var listCompleted = [];
     var bNew = false;
 
-    if (arr.length) {
+    if (arr.length && arr.length > 0) {
 
       arr.forEach((item, i) => {
         var beginDate = item.beginDate;
@@ -109,7 +98,7 @@ Page({
         }
       })
     } else {
-      bNew: true
+      bNew = true
     }
 
     // 如果setData写在if里，onShow调用的时候如果arr为空，list将不能被重新赋值。

@@ -1,6 +1,6 @@
 
 .template-tag {
-  padding: 30rpx 20rpx;
+  padding: 20rpx;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -23,7 +23,6 @@
 
 .template-tag .active {
   font-weight: bold;
-  font-size: 18px;
   background: #efce4a;
   color: #fff;
 }

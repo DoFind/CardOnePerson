@@ -15,35 +15,39 @@
   height: 52rpx;
   line-height: 52rpx;
 }
+
 .item-box .checkbox image {
   width: 30rpx;
   height: 26rpx;
 }
 
 .list-item .name {
-  width: 500rpx;
+  width: 580rpx;
   font-size: 16px;
   color: #333;
 }
 
-
 /* 完成状态 */
+
 .list-item.done .name, .list-item.done .text {
   text-decoration: line-through;
   color: #999;
 }
 
 /* 详情 */
+
 .desc-box .desc {
   margin-left: 54rpx;
   margin-top: 10rpx;
-  font-size: 14px;
+  font-size: 15px;
   color: #444;
 }
 
+/* 编辑按钮 */
+
 .desc-box .edit {
   position: absolute;
-  right: 10rpx;
+  right: 70rpx;
   top: 0;
   width: 60rpx;
   height: 60rpx;
@@ -53,43 +57,71 @@
 }
 
 .desc-box .edit image {
-  margin-top: 11rpx;
-  margin-left: 8rpx;
-  width: 40rpx;
-  height: 37rpx;
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 5rpx;
+  margin-right: 5rpx;
 }
 
+/* 删除按钮 */
 
-.editor-box {
+.desc-box .del {
   position: absolute;
-  left: 50rpx;
-  top: -4rpx;
-  display: flex;
-  height: 80rpx;
-}
-
-.editor-box .editor {
-  margin-right: 20rpx;
-  padding: 0 4rpx;
-  width: 500rpx;
-  height: 60rpx;
-  border: 1px solid #999;
-  font-size: 16px;
-  color: #333;
-  background: #fff;
-  border-radius: 8rpx;
-}
-
-.editor-box .del {
-  width: 60rpx;
-  height: 60rpx;
+  right: 0;
+  top: 2rpx;
+  width: 56rpx;
+  height: 56rpx;
   text-align: center;
   border-radius: 50%;
   background: #d75a4a;
 }
 
-.editor-box .del image {
-  margin-top: 10rpx;
+.desc-box .del image {
+  margin-top: 8rpx;
   width: 40rpx;
   height: 40rpx;
 }
+
+/* 编辑框 */
+
+.editor-box {
+  /* display: block; */
+  /* display: flex; */
+  margin: 20rpx 0;
+  padding: 20rpx 30rpx 30rpx;
+  width: 650rpx;
+  min-height: 200rpx;
+  background: #eee;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+.editor-box .text {
+  line-height: 2.4;
+  font-size: 16px;
+  color: #333;
+}
+
+.editor-box .editor {
+  padding: 0 10rpx;
+  width: 100%;
+  font-size: 15px;
+  color: #333;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8rpx;
+  box-sizing: border-box;
+}
+
+.editor-box input {
+  height: 60rpx;
+}
+
+.editor-box textarea {
+  height: 160rpx;
+}
+.editor-box button {
+  margin-top: 20rpx;
+}
+

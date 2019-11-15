@@ -1,0 +1,19 @@
+<view class='container'>
+
+  <view class='user-info'>
+    <image class='user-pic' src='{{avatarUrl}}' mode='aspectFill'></image>
+    <text class='user-name'>{{nickName}}</text>
+  </view>
+
+  <view class='list-wrap'>
+    <view class='list-item'>
+      <button class='text' bindtap='onUpload'>上传本地数据至云端</button>
+    </view>
+    <view class='list-item'>
+      <button class='text' bindtap='onDownload'>同步云端数据，会覆盖本地</button>
+    </view>
+    <view class='list-item'>
+      <button class='text' bindtap='onAboutUs'>反馈</button>
+    </view>
+  </view>
+</view>

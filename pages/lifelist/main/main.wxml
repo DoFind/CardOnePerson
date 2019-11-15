@@ -10,15 +10,15 @@
 <view class='main-container'>
 
   <view wx:if='{{bNew}}' class='desc-wrap'>
-    <view class='text'>一些介绍:</view>
+    <view class='text big-text'>清单介绍：</view>
     <view class='text'>列个清单，明晰一下未来要做的事情</view>
     <view class='text'>可以是人生目标清单，读书清单，购物清单，或者休闲看剧清单等</view>
-    <view class='text'>点击右下角添加一个待办吧~</view>
+    <view class='text'>点击右下角添加~</view>
   </view>
 
   <view wx:else>
     <view class='lifelist-wrap'>
-      <view class='main-title'>全部清单</view>
+      <!-- <view class='main-title'>全部清单</view> -->
       <view class='main-content'>
         
         <tags tags='{{tags}}' curTag='{{curTag}}' bind:showAll='showAll' bind:showCateContent='showCateContent' />
@@ -27,7 +27,10 @@
           <block wx:for='{{allList}}'>
             <view class='tag'>{{index}}</view>
             <block wx:for='{{item}}'>
-              <todo item='{{item}}' bind:onDelete='onDelete' bind:onEditEnd='onEditEnd' bind:onChangeDoneState='onChangeDoneState'/>
+              <todo item='{{item}}' 
+                bind:onDelete='onDelete' 
+                bind:onEditEnd='onEditEnd' 
+                bind:onChangeDoneState='onChangeDoneState'/>
             </block>
           </block>
         </view>

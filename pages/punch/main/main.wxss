@@ -10,6 +10,11 @@
   font-size: 16px;
   color: #333;
 }
+.desc-wrap .big-text {
+  line-height: 3;
+  font-size: 20px;
+  font-weight: bold;
+}
 
 /* 打卡 list */
 .punch-list {
@@ -29,12 +34,12 @@
 .punch-box {
   display: flex;
   flex-direction: column;
-  margin: 30rpx auto;
+  margin: 0 auto 20rpx;
+  padding: 30rpx 0 10rpx;
   width: 700rpx;
 }
 
 .punch-list swiper {
-  margin: 30rpx auto;
+  margin: 0 auto;
   width: 700rpx;
-  height: 330rpx;
 }

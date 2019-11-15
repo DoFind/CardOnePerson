@@ -21,15 +21,11 @@ Page({
   },
 
   // 获取 起止时间
-  getDate(bIncludeToday){
+  getDate(bIncludeToday) {
 
-    var beginDate, endDate;
-    var now = new Date();
-
-    beginDate = bIncludeToday ? util.formatFutureTime(now, 0) : util.formatFutureTime(now,1);
-    endDate = util.formatFutureTime(beginDate, this.data.sumDays - 1);
-    // console.log("beginDate:" + beginDate);
-    // console.log("endDate:" + endDate);
+    var now = new Date(),
+      beginDate = bIncludeToday ? util.formatFutureTime(now, 0) : util.formatFutureTime(now, 1),
+      endDate = util.formatFutureTime(beginDate, this.data.sumDays - 1);
 
     return {
       beginDate: beginDate,
@@ -53,11 +49,21 @@ Page({
 
   // 设置计划天数
   sumDaysChange(e) {
+    var oriSumDays = this.data.sumDays;
     var sumDays = parseInt(e.detail.value);
-    if (sumDays && sumDays > 0){
+    if (sumDays && sumDays > 0) {
       this.setData({
         sumDays: sumDays,
         endDate: util.formatFutureTime(this.data.beginDate, sumDays - 1)
+      })
+    } else {
+      wx.showModal({
+        title: 'Hey, 别急',
+        content: '周期至少是1天',
+        showCancel: false
+      })
+      this.setData({
+        sumDays: oriSumDays
       })
     }
   },
@@ -66,28 +72,47 @@ Page({
   // 时间设定
   // 怎么都觉得这里有些重复
   bindBeginDateChange(e) {
-    var beginDate = e.detail.value;
-    var endDate = util.formatFutureTime(beginDate, this.data.sumDays-1);
-    // console.log("改开始时间：beginDate:" + beginDate);
-    // console.log("endDate:" + endDate);
-    this.setData({
-      beginDate: beginDate,
-      endDate: endDate
-    })
+    var beginDate = e.detail.value,
+      now = new Date();
+
+    if (util.compareDate(beginDate, now) > 0) {
+      var endDate = util.formatFutureTime(beginDate, this.data.sumDays - 1);
+
+      this.setData({
+        beginDate: beginDate,
+        endDate: endDate
+      })
+    } else {
+      wx.showModal({
+        title: 'Hey, 别急',
+        content: '开始时间不得早于今天',
+        showCancel: false
+      })
+    }
   },
-  
+
   bindEndDateChange: function(e) {
-    // console.log("endDate:" + e.detail.value)
 
-    var endDate = e.detail.value;
-    var sumDays = util.getSumDays(this.data.beginDate, endDate);
+    var endDate = e.detail.value,
+      beginDate = this.data.beginDate,
+      now = new Date();
 
-    this.setData({
-      sumDays: sumDays,
-      endDate: endDate
-    })
+    if (util.compareDate(endDate, beginDate) > 0 && util.compareDate(endDate, now) > 0) {
+
+      var sumDays = util.getSumDays(beginDate, endDate);
+      this.setData({
+        sumDays: sumDays,
+        endDate: endDate
+      })
+    } else {
+      wx.showModal({
+        title: 'Hey, 别急',
+        content: '结束时间不得早于开始时间和今天',
+        showCancel: false
+      })
+    }
   },
-  
+
 
   // 标题，简介 设定
   titleChange(e) {
@@ -103,7 +128,7 @@ Page({
 
   // 创建新活动。创建成功跳转至创建成功页
   createActivity() {
-    // console.log("createActivity");
+
     // 活动名称自然不可为空
     if (this.data.title.length == 0) {
 
@@ -112,21 +137,6 @@ Page({
         content: '请先给计划起个名字',
         showCancel: false
       })
-      return;
-    }
-
-    // 先验证时间的合理性
-    // 结束时间 > 开始时间 > now
-    var begin = this.data.beginDate; // + ' ' + this.data.beginTime;
-    var end = this.data.endDate; // + ' ' + this.data.endTime;
-    var msg = util.checkTime(begin, end)
-    if (msg.length) {
-      wx.showModal({
-        title: '出错啦',
-        content: msg,
-        showCancel: false
-      })
-
       return;
     }
 

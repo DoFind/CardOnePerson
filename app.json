@@ -3,10 +3,12 @@
     "pages/punch/main/main",
     "pages/punch/create/create",
     "pages/punch/detail/detail",
-    "pages/index/index",
-    "pages/index/create/create",
+    "pages/punch/edit/edit",
     "pages/lifelist/main/main",
-    "pages/lifelist/create/create"
+    "pages/lifelist/create/create",
+    "pages/three/main/main",
+    "pages/three/create/create",
+    "pages/mine/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -19,7 +21,7 @@
     "selectedColor": "#1f4ba5",
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/three/main/main",
         "text": "计划",
         "iconPath": "/img/tab/things.png",
         "selectedIconPath": "/img/tab/things_hl.png"
@@ -37,5 +39,6 @@
         "selectedIconPath": "/img/tab/list_hl.png"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

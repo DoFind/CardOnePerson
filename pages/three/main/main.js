@@ -34,7 +34,7 @@ Page({
   onAddThreeThings: function(event) {
 
     wx: wx.navigateTo({
-      url: 'create/create',
+      url: '../create/create',
       success: function(res) {},
       fail: function(res) {},
       complete: function(res) {},

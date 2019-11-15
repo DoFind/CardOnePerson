@@ -1,41 +1,38 @@
-# 微信小程序 - 打卡 & 清单
-> 今天又是元气满满的一天呢
+# 打卡
 
-## 简介
+#### 项目介绍
+小程序，单人打卡。
+7天一个周期，坚持是一次次做出来的。
 
-微信小程序，单人打卡 + 待办
+#### 软件架构
+软件架构说明
 
-### 扫码体验一下
 
-![打卡小程序二维码](img/dk.jpg)
+#### 安装教程
 
-### 现有功能页
-#### 打卡
-- 单人版
-- 打卡项目周期可以灵活设置，设置起止时间 或者 设置打卡项目的周期
-- 本地 Storage 存储数据
-- 连续打卡7天可获得小勋章一枚
+1. xxxx
+2. xxxx
+3. xxxx
 
-#### 待办
-- 可以自建待办分类，暂不支持删除
-- 新建的待办可以属于多个分类
-- 待办项支持 增 删 改
+#### 使用说明
 
-#### 三件事
-- 当下最重要的三个目标（ 三件事情 ）
-- 千万别偏航~~
+1. xxxx
+2. xxxx
+3. xxxx
 
-## 安装使用
+#### 参与贡献
 
-1. clone 项目至本地 `git clone git@github.com:DoFind/CardOnePerson.git [rename it]` 或者 选用`https`的路径
-2. 在微信开发工具中打开, AppID使用小程序测试号 
+1. Fork 本项目
+2. 新建 Feat_xxx 分支
+3. 提交代码
+4. 新建 Pull Request
 
-## 交流 & 提问
 
-[https://github.com/DoFind/CardOnePerson/issues](https://github.com/DoFind/CardOnePerson/issues)
+#### 码云特技
 
-## 关于作者
-
-- 个人主页 [https://www.freedays.cc](https://www.freedays.cc)
-- 微信请嗑瓜子 ![微信打赏二维码](img/ds.jpg)
-
+1. 使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
+2. 码云官方博客 [blog.gitee.com](https://blog.gitee.com)
+3. 你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
+4. [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
+5. 码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
+6. 码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)

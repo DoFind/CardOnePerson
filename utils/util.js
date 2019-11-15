@@ -62,6 +62,7 @@ function formatTime(date) {
 
   } else {
 
+
     var temp = date.split(' ');
     var dd = temp[0].split('-');
     var tt = temp[1].split(':');
@@ -123,6 +124,7 @@ function getSumDays(begin, end) {
   // console.log("getSumDays 间隔天数：" + days);
   return days;
 }
+
 
 
 // 活动状态判定   用标准时间比较，只比较年月日，不涉及时分秒
@@ -341,5 +343,6 @@ module.exports = {
   retPunched: retPunched,
   getBtnText: getBtnText,
   getTaskState: getTaskState,
-  getTaskColorClass: getTaskColorClass
+  getTaskColorClass: getTaskColorClass,
+  compareDate: compareDate
 }
