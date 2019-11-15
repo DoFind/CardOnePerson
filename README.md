@@ -36,6 +36,6 @@
 
 ## 关于作者
 
-- 个人主页 [https://dofind.github.io](https://dofind.github.io)
+- 个人主页 [https://www.freedays.cc](https://www.freedays.cc)
 - 微信请嗑瓜子 ![微信打赏二维码](img/ds.jpg)
 
