@@ -7,7 +7,7 @@
 
 ### 扫码体验一下
 
-![打卡小程序二维码](https://www.bjyxszd.com/public/img/material/official/1.jpg)
+![打卡小程序二维码](https://dofind.github.io/img/v3/dk2.jpg)
 
 ### 现有功能页
 #### 打卡
