@@ -7,7 +7,7 @@
 
 ### 扫码体验一下
 
-![打卡小程序二维码](https://dofind.github.io/img/v3/dk2.jpg)
+![打卡小程序二维码](https://dofind.github.io/img/github.io/dk.jpg)
 
 ### 现有功能页
 #### 打卡
@@ -39,7 +39,7 @@
 - 个人主页 [https://www.freedays.cc](https://www.freedays.cc)
 - 个人公众号，随意关注  
    
-  ![个人公众号](img/cc.jpg)
+  ![个人公众号](https://dofind.github.io/img/github.io/dofind.jpg)
 - 微信请嗑瓜子 
 
-  ![微信打赏二维码](img/ds.jpg)
+  ![微信打赏二维码](https://dofind.github.io/img/github.io/zs.jpg)
