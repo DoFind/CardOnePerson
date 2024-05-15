@@ -37,9 +37,6 @@
 ## 关于作者
 
 - 个人主页 [https://www.freedays.cc](https://www.freedays.cc)
-- 个人公众号，随意关注  
-   
-  ![个人公众号](https://dofind.github.io/img/github.io/dofind.jpg)
-- 微信请嗑瓜子 
+- 请吃辣条
 
   ![微信打赏二维码](https://dofind.github.io/img/github.io/zs.jpg)
